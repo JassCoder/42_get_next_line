@@ -28,6 +28,7 @@ char	*gnl_strchr(const char *s, int c);
 char	*gnl_strjoin(char *s1, char *s2);
 char	*gnl_substr(const char *s, unsigned int start, size_t len);
 void	*gnl_memcpy(void *dst, const void *src, size_t n);
+char	*gnl_strdup(const char *s);
 #endif
 /*
  gnl_strlen  = Measures string length for memory allocation 
