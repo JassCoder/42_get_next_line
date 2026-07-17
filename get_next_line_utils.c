@@ -19,7 +19,9 @@ size_t	gnl_strlen(const char *s)
 	size_t	count;
 
 	count = 0;
-	while (s[count] != '/0')
+	if (!s)
+        	return (0);
+	while (s[count] != '\0')
 		count++;
 	return (count);
 }
@@ -33,8 +35,8 @@ char	*gnl_strchr(const char *s, int c)
 		if (*s == (char)c)
 		{
 			return ((char *)s);
-			s++;
 		}
+		s++;
 	}
 	if (((char)c) == '\0')
 		return ((char *)s);
@@ -48,6 +50,12 @@ char	*gnl_strjoin(char *s1, char *s2)
 	size_t	len1;
 	size_t	len2;
 
+	if (!s1 && !s2)
+    		return (NULL);
+	if (!s1)
+   		return (gnl_strdup(s2));
+	if (!s2)
+    		return (gnl_strdup(s1));
 	len1 = gnl_strlen(s1);
 	len2 = gnl_strlen(s2);
 	t_len = len1 + len2;
@@ -60,7 +68,7 @@ char	*gnl_strjoin(char *s1, char *s2)
 	return (joined);
 }
 
-char	*gnl_substr(const char const *s, unsigned int start, size_t len)
+char	*gnl_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	size_t	i;
@@ -82,7 +90,7 @@ char	*gnl_substr(const char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 
-void	*gnl_mencpy(void *dst, const void *src, size_t n)
+void	*gnl_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t			i;
 	unsigned char		*d;

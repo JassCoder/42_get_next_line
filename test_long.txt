@@ -1,0 +1,145 @@
+Line 1: The quick brown fox jumps over the lazy dog.
+
+Line 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Line 3: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+Line 4: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+
+Line 5: Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.
+
+Line 6: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.
+
+Line 7: Officia deserunt mollit anim id est laborum.
+
+Line 8: Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.
+
+Line 9: Nullam varius, turpis et commodo pharetra, est eros bibendum elit.
+
+Line 10: Nec luctus magna felis sollicitudin mauris. Integer in mauris.
+
+Line 11: Pellentesque habitant morbi tristique senectus et netus et malesuada.
+
+Line 12: Fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.
+
+Line 13: Ultricies eget, tempor sit amet, ante. Donec eu libero sit amet.
+
+Line 14: Quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat.
+
+Line 15: Eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
+
+Line 16: Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet.
+
+Line 17: Wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum.
+
+Line 18: Rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in.
+
+Line 19: Turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus.
+
+Line 20: Faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.
+
+Line 21: Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor.
+
+Line 22: Facilisis luctus, metus. Pellentesque habitant morbi tristique senectus.
+
+Line 23: Et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam.
+
+Line 24: Feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero.
+
+Line 25: Sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris.
+
+Line 26: Placerat eleifend leo. Quisque sit amet est et sapien ullamcorper.
+
+Line 27: Pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae.
+
+Line 28: Ornare sit amet wisi. Aenean fermentum, elit eget tincidunt condimentum.
+
+Line 29: Eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non.
+
+Line 30: Enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque.
+
+Line 31: Id cursus faucibus, tortor neque egestas augue, eu vulputate magna.
+
+Line 32: Eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis.
+
+Line 33: Accumsan porttitor, facilisis luctus, metus. Pellentesque habitant.
+
+Line 34: Morbi tristique senectus et netus et malesuada fames ac turpis.
+
+Line 35: Egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.
+
+Line 36: Tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+
+Line 37: Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+
+Line 38: Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat.
+
+Line 39: Wisi, condimentum sed, commodo vitae, ornare sit amet wisi.
+
+Line 40: Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum.
+
+Line 41: Orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis.
+
+Line 42: Pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus.
+
+Line 43: Faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.
+
+Line 44: Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor.
+
+Line 45: Facilisis luctus, metus. Pellentesque habitant morbi tristique senectus.
+
+Line 46: Et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam.
+
+Line 47: Feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero.
+
+Line 48: Sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris.
+
+Line 49: Placerat eleifend leo. Quisque sit amet est et sapien ullamcorper.
+
+Line 50: Pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae.
+
+Line 51: Ornare sit amet wisi. Aenean fermentum, elit eget tincidunt condimentum.
+
+Line 52: Eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non.
+
+Line 53: Enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque.
+
+Line 54: Id cursus faucibus, tortor neque egestas augue, eu vulputate magna.
+
+Line 55: Eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis.
+
+Line 56: Accumsan porttitor, facilisis luctus, metus. Pellentesque habitant.
+
+Line 57: Morbi tristique senectus et netus et malesuada fames ac turpis.
+
+Line 58: Egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.
+
+Line 59: Tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+
+Line 60: Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+
+Line 61: This is a very long line that will test how your get_next_line handles lines that are significantly longer than the BUFFER_SIZE. It contains many words and will require multiple reads to complete. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. This line is intentionally made very long to stress test your buffer management and memory handling.
+
+Line 62: This is another very long line to test multiple long lines in a row. It contains a lot of text and will require multiple reads from the file descriptor. The goal is to ensure that your get_next_line can handle long lines efficiently without memory leaks or performance issues. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. This line continues with even more text to make it longer and more challenging for your implementation.
+
+Line 63: Yet another long line to test your function's ability to handle consecutive long lines. This is important because real-world files often contain multiple long paragraphs. Your implementation should be able to handle this scenario without losing data or causing memory issues. The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Line 64: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Line 65: Short line.
+
+Line 66: Medium length line with some words.
+
+Line 67: Another medium line but a bit longer than the previous one.
+
+Line 68: This line is somewhat longer than medium but not as long as the very long ones.
+
+Line 69: A line with numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+Line 70: A line with special characters: !@#$%^&*()_+-=[]{}|;':",.<>?/
+
+Line 71: A line with mixed case and punctuation: Hello, World! How are you today? I hope you're doing well.
+
+Line 72: A line that ends with a period. This is a normal sentence.
+
+Line 73: This is the final line of the test file. It doesn't have a newline at the end, so your function should handle EOF correctly and return this line without a trailing newline.
