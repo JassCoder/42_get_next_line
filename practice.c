@@ -50,29 +50,29 @@
 
 //  file descriptor
 
-// int main(void)
-// {
-// 	int		fd;
-// 	char	        *line;
-// 	int		line_count;
+int main(void)
+{
+	int		fd;
+	char	        *line;
+	int		line_count;
 
-// 	fd = open("test_long.txt", O_RDONLY);
-// 	if (fd < 0)
-// 	{
-// 		printf("Error opening file!\n");
-// 		return (1);
-// 	}
-// 	line_count = 0;
-// 	while ((line = get_next_line(fd)) != NULL)
-// 	{
-// 		line_count++;
-// 		printf("Line %d: %s", line_count, line);
-// 		free(line);
-// 	}
-// 	printf("\nTotal lines read: %d\n", line_count);
-// 	close(fd);
-// 	return (0);
-// }
+	fd = open("test_long.txt", O_RDONLY);
+	if (fd < 0)
+	{
+		printf("Error opening file!\n");
+		return (1);
+	}
+	line_count = 0;
+	while ((line = get_next_line(fd)) != NULL)
+	{
+		line_count++;
+		printf("Line %d: %s", line_count, line);
+		free(line);
+	}
+	printf("\nTotal lines read: %d\n", line_count);
+	close(fd);
+	return (0);
+}
 
 //  Read() calls
 
