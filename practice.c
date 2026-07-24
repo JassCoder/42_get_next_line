@@ -50,26 +50,28 @@
 
 //  file descriptor
 
-int main(void)
+int	main(void)
 {
 	int		fd;
-	char	        *line;
+	char	*line;
 	int		line_count;
 
 	fd = open("test_long.txt", O_RDONLY);
 	if (fd < 0)
 	{
-		printf("Error opening file!\n");
+		printf("❌ Error opening file!\n");
+		printf("Make sure test_long.txt exists in: %s\n", __FILE__);
 		return (1);
 	}
+	printf( "File opened successfully! fd = %d\n", fd);
+	
 	line_count = 0;
 	while ((line = get_next_line(fd)) != NULL)
 	{
 		line_count++;
-		printf("Line %d: %s", line_count, line);
+		printf("%s", line);
 		free(line);
 	}
-	printf("\nTotal lines read: %d\n", line_count);
 	close(fd);
 	return (0);
 }
