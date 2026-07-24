@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsingh <jsingh@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/15 17:41:36 by jsingh            #+#    #+#             */
-/*   Updated: 2026/07/24 18:09:08 by jsingh           ###   ########.fr       */
+/*   Created: 2026/07/24 17:56:49 by jsingh            #+#    #+#             */
+/*   Updated: 2026/07/24 18:02:11 by jsingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+
+#include "get_next_line_bonus.h"
 
 size_t	gnl_strlen(const char *s)
 {
@@ -88,8 +89,8 @@ char	*gnl_substr(const char *s, unsigned int start, size_t len)
 
 void	*gnl_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t				i;
-	unsigned char		*d;
+	size_t			i;
+	unsigned char	*d;
 	const unsigned char	*s;
 
 	if (!dst && !src)
@@ -103,4 +104,19 @@ void	*gnl_memcpy(void *dst, const void *src, size_t n)
 		i++;
 	}
 	return (dst);
+}
+
+char	*gnl_strdup(const char *s)
+{
+	char	*dup;
+	size_t	len;
+
+	if (!s)
+		return (NULL);
+	len = gnl_strlen(s);
+	dup = malloc(len + 1);
+	if (!dup)
+		return (NULL);
+	gnl_memcpy(dup, s, len + 1);
+	return (dup);
 }

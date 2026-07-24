@@ -1,38 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsingh <jsingh@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/15 17:41:17 by jsingh            #+#    #+#             */
-/*   Updated: 2026/07/24 18:12:44 by jsingh           ###   ########.fr       */
+/*   Created: 2026/07/24 17:56:45 by jsingh            #+#    #+#             */
+/*   Updated: 2026/07/24 18:03:20 by jsingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-
-static char	*gnl_strdup(const char *s)
-{
-	char	*dup;
-	size_t	len;
-	size_t	i;
-
-	if (!s)
-		return (NULL);
-	len = gnl_strlen(s);
-	dup = (char *)malloc(sizeof(char) * (len + 1));
-	if (!dup)
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		dup[i] = s[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
-}
+#include "get_next_line_bonus.h"
 
 static char	*extract_line(char **stash)
 {
@@ -80,50 +58,55 @@ static char	*handle_errors(char **stash)
 	return (NULL);
 }
 
-static char	*read_and_join(int fd, char **stash, char *buffer)
+char	*get_next_line(int fd)
 {
-	ssize_t	bytes_read;
+	static char	*stash[MAX_FDS];
+	char		*buffer;
+	char		*line;
+	ssize_t		bytes_read;
 
-	while (!gnl_strchr(*stash, '\n'))
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= MAX_FDS)
+		return (NULL);
+	if (!stash[fd])
+	{
+		stash[fd] = gnl_strdup("");
+		if (!stash[fd])
+			return (NULL);
+	}
+	buffer = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (!buffer)
+		return (handle_errors(&stash[fd]));
+	while (!gnl_strchr(stash[fd], '\n'))
 	{
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
 		if (bytes_read == -1)
-			return (NULL);
+		{
+			free(buffer);
+			return (handle_errors(&stash[fd]));
+		}
 		if (bytes_read == 0)
-			break ;
+			break;
 		buffer[bytes_read] = '\0';
-		*stash = gnl_strjoin(*stash, buffer);
-		if (!*stash)
+		stash[fd] = gnl_strjoin(stash[fd], buffer);
+		if (!stash[fd])
+		{
+			free(buffer);
 			return (NULL);
+		}
 	}
-	return (*stash);
-}
 
-char	*get_next_line(int fd)
-{
-	static char	*stash;
-	char		*buffer;
-	char		*line;
-
-	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (NULL);
-	if (!stash)
-	{
-		stash = gnl_strdup("");
-		if (!stash)
-			return (NULL);
-	}
-	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
-	if (!buffer)
-		return (handle_errors(&stash));
-	if (!read_and_join(fd, &stash, buffer))
-	{
-		free(buffer);
-		return (handle_errors(&stash));
-	}
 	free(buffer);
-	if (!stash || *stash == '\0')
-		return (handle_errors(&stash));
-	line = extract_line(&stash);
+
+	if (!stash[fd] || *stash[fd] == '\0')
+		return (handle_errors(&stash[fd]));
+
+	line = extract_line(&stash[fd]);
+
+	if (line && (!stash[fd] || *stash[fd] == '\0'))
+	{
+		free(stash[fd]);
+		stash[fd] = NULL;
+	}
+
 	return (line);
 }
